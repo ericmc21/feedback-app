@@ -5,15 +5,14 @@ import RatingsSelect from "./RatingsSelect";
 import { useState, useContext, useEffect } from "react";
 import FeedbackContext from "../context/FeedbackContext";
 
-export default function FeedbackForm({}) {
+export default function FeedbackForm({ emptyObject }) {
   const [text, setText] = useState("");
   const [rating, setRating] = useState(10);
   const [btnDisabled, setBtnDisabled] = useState(true);
   const [message, setMessage] = useState("");
 
-  const { addFeedback, feedbackEdit, updateFeedback } = useContext(
-    FeedbackContext
-  );
+  const { addFeedback, feedbackEdit, updateFeedback } =
+    useContext(FeedbackContext);
 
   useEffect(() => {
     if (feedbackEdit.edit === true) {
