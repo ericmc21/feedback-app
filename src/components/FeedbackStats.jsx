@@ -2,7 +2,7 @@ import React from "react";
 import { useContext } from "react";
 import FeedbackContext from "../context/FeedbackContext";
 
-export default function FeedbackStats({ item }) {
+export default function FeedbackStats({ emptyObject }) {
   const { feedback } = useContext(FeedbackContext);
   // calculate ratings aversage
   let average =
